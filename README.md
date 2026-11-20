@@ -37,9 +37,13 @@ Flask control plane for the warehouse: 6 config-driven pipelines, full or per-la
 Centralized monitoring for hotel IT assets with role-based views, prioritized real-time alerts and an AI assistant.  
 `TypeScript` `React` `Node.js`
 
-**ChronoTrack — incident timer** · [`incident-timer`](https://github.com/amiopp/incident-timer)  
-Live incident-tracking board displayed on internal operations screens.  
-`TypeScript`
+**World Cup prediction platform** · [`pronos-coupe-dumonde`](https://github.com/amiopp/pronos-coupe-dumonde)  
+Internal prediction game used by RATP Dev employees. Pulls live scores and market odds (Polymarket, The Odds API), normalizes them into probabilities and scores each pick by how unlikely it was, with a FIFA-ranking fallback when no market exists.  
+`PHP` `Laravel` `REST APIs`
+
+**ChronoTrack — incident tracking** · *RATP Dev control room (private)*  
+Real-time incident board shown on operations-centre screens: qualify an incident, track its live duration, raise alerts.  
+`TypeScript` `Docker`
 
 ---
 
