@@ -25,13 +25,13 @@ Most recently at **RATP Dev Casablanca** (operator of the Casablanca tramway & b
 
 ### Selected work
 
-**Medallion KPI warehouse** · *RATP Dev Casablanca, final-year project (company code, private)*  
-SQL Server warehouse (Bronze → Silver → Gold) consolidating HR and Maintenance data from AGIRH, GMAO and network Excel files. 5 star schemas (HR, preventive maintenance, rolling-stock availability, MDBFS, contract indicators) feeding 10+ KPIs, with Python loaders and T-SQL stored procedures for every layer transition. Power BI dashboards for HR and Maintenance managers, plus a Prophet module producing 6-month absenteeism and turnover forecasts written back to Gold.  
-`Python` `SQL Server` `T-SQL` `Power BI` `DAX` `Prophet`
+**TrackFlow: Medallion data platform for transit KPIs** · [`trackflow`](https://github.com/amiopp/trackflow) · [![CI](https://github.com/amiopp/trackflow/actions/workflows/ci.yml/badge.svg)](https://github.com/amiopp/trackflow/actions)  
+Public, runnable rebuild of my RATP Dev final-year project on synthetic data. Bronze → Silver → Gold in SQL with star schemas, a config-driven orchestrator (DAG validation, retries with backoff, downstream skip on failure, partial reruns, full run log), declarative data quality gates, back-tested forecasts that beat a seasonal-naive baseline by up to 51 %, and a Flask monitoring dashboard. 26 tests, CI on every push, `docker compose up` to run it.  
+`Python` `SQL` `Flask` `scikit-learn` `pytest` `GitHub Actions` `Docker`
 
-**TrackFlow — ETL orchestration platform** · *same project (private)*  
-Flask control plane for the warehouse: 6 config-driven pipelines, full or per-layer reloads, cron scheduling (APScheduler), retries with exponential backoff, execution logs, success-rate and duration metrics, email/Teams alerting, REST API.  
-`Python` `Flask` `APScheduler` `Chart.js`
+**Production version** · *RATP Dev Casablanca, final-year project (company code, private)*  
+The original ran on SQL Server: Python loaders from AGIRH, GMAO and network Excel files, T-SQL stored procedures for every layer, 5 star schemas (HR, preventive maintenance, rolling-stock availability, MDBFS, contract indicators) behind 10+ KPIs, Power BI dashboards for HR and Maintenance managers, and Prophet forecasts of absenteeism and turnover written back to Gold.  
+`SQL Server` `T-SQL` `Power BI` `DAX` `Prophet`
 
 **Vigon Monitor — hotel IT infrastructure monitoring** · [`vigon-monitor`](https://github.com/amiopp/vigon-monitor)  
 Centralized monitoring for hotel IT assets with role-based views, prioritized real-time alerts and an AI assistant.  
